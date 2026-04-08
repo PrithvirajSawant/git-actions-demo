@@ -1,5 +1,4 @@
 FROM python:3.10
 WORKDIR /app
-COPY . .
-RUN pip install -r requirements.txt
-CMD ["pytest"]
+COPY src/math_operations.py /src
+CMD ["python", "src/math_operations.py"]
